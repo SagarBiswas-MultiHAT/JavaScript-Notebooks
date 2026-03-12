@@ -297,6 +297,18 @@ What it does:
 - confirms the README includes the notebook references
 - runs automated tests with Python's built-in unittest module
 
+## Companion projects
+
+Beyond this notebook collection, the same author maintains security-focused utilities and labs that complement the learning path:
+
+| Project | Focus | Link |
+| --- | --- | --- |
+| WiFi QR Generator | Generates guest WiFi QR codes so you can share network access without revealing passwords. | [GitHub](https://github.com/SagarBiswas-MultiHAT/WiFi-QR-Generator) |
+| BruteforceLab1 | A safe play sandbox for experimenting with brute-force techniques and observing defensive throttling. | [GitHub](https://github.com/SagarBiswas-MultiHAT/BruteforceLab1) |
+| Multi-FA-Auth | Multi-factor authentication flows covering passwordless prompts, TOTP, and email fallbacks. | [GitHub](https://github.com/SagarBiswas-MultiHAT/Multi-FA-Auth/) |
+| Password Strength Checker | A live password scoring utility that reinforces the best practices covered in the notebooks. | [GitHub](https://github.com/SagarBiswas-MultiHAT/Password-Strength-Checker) |
+| XSS WebGuard | A defensive experiment detecting and neutralizing reflected XSS payloads in forms. | [GitHub](https://github.com/SagarBiswas-MultiHAT/XSS-WebGuard) |
+
 ## Repository structure
 
 ```text

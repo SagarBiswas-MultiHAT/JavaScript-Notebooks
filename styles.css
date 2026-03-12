@@ -78,6 +78,7 @@ input {
 .container {
     width: min(calc(100% - 2rem), var(--container));
     margin: 0 auto;
+    width: 90%;
 }
 
 .site-header {
@@ -324,7 +325,8 @@ h3 {
 }
 
 .track-grid,
-.value-grid {
+.value-grid,
+.project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -334,6 +336,27 @@ h3 {
 .notebook-card {
     border-radius: var(--radius-lg);
     overflow: hidden;
+}
+
+.project-card {
+    border-radius: var(--radius-lg);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-height: 230px;
+}
+
+.project-card p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.project-card a {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .track-card,
@@ -572,7 +595,8 @@ summary::-webkit-details-marker {
     .hero-grid,
     .track-grid,
     .card-grid,
-    .value-grid {
+    .value-grid,
+    .project-grid {
         grid-template-columns: 1fr;
     }
 
