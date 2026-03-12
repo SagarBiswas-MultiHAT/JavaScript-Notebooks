@@ -1,5 +1,8 @@
 # JavaScript Notebooks
 
+[![CI](https://github.com/SagarBiswas-MultiHAT/JavaScript-Notebooks/actions/workflows/python-ci.yml/badge.svg)](https://github.com/SagarBiswas-MultiHAT/JavaScript-Notebooks/actions) [![Pages](https://img.shields.io/github/deployments/SagarBiswas-MultiHAT/JavaScript-Notebooks/github-pages?label=pages&logo=github)](https://SagarBiswas-MultiHAT.github.io/JavaScript-Notebooks/) [![Release](https://img.shields.io/github/v/release/SagarBiswas-MultiHAT/JavaScript-Notebooks)](https://github.com/SagarBiswas-MultiHAT/JavaScript-Notebooks/releases) [![License](https://img.shields.io/github/license/SagarBiswas-MultiHAT/JavaScript-Notebooks)](https://github.com/SagarBiswas-MultiHAT/JavaScript-Notebooks/blob/main/LICENSE) [![Notebooks](https://img.shields.io/badge/notebooks-6-brightgreen)](data/notebooks.json)
+
+
 This repository is a structured JavaScript learning library by Sagar Biswas. It started as a collection of PDF notebooks, and it now includes a professional GitHub Pages-ready website, a searchable catalog, and an automated quality gate.
 
 If someone opens this repository for the first time, the goal is simple: they should immediately understand what is here, what each notebook teaches, where to start, and how to move through the material without guessing.
