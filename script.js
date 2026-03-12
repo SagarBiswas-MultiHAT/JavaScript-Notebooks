@@ -17,6 +17,24 @@ const elements = {
     currentYear: document.getElementById('current-year')
 };
 
+  const TRACK_DETAILS = {
+    foundations: {
+      hero: 'JavaScript Basics',
+      description:
+        'Master the language fundamentals, operators, arrays, objects, constructors, and essential Math/Date APIs before moving into DOM work.'
+    },
+    'browser-apis': {
+      hero: 'Web Storage API, DOM, BOM',
+      description:
+        'Build browser-aware interfaces by selecting elements, handling events, and understanding the BOM plus storage trade-offs.'
+    },
+    'modern-js': {
+      hero: 'Best Practices, Error Handling, Canvas & ES6+',
+      description:
+        'Adopt defensive coding habits, modern syntax, modules, classes, and asynchronous thinking that production JavaScript uses.'
+    }
+  };
+
 function escapeHtml(value) {
     return String(value)
         .replaceAll('&', '&amp;')
@@ -58,17 +76,25 @@ function renderTracks(catalog) {
 
     elements.trackGrid.innerHTML = grouped
         .map(
-            (group) => `
+      (group) => {
+        const details = TRACK_DETAILS[group.id] || {};
+        const heroText = details.hero || group.titles[0] || group.label;
+
+        return `
         <article class="track-card">
-          <div class="pill-row">
-            <span class="pill">${escapeHtml(group.label)}</span>
-            <span class="pill">${group.count} notebooks</span>
-            <span class="pill">${group.pageTotal} pages</span>
+          <div class="track-card-head">
+            <p class="track-eyebrow">${escapeHtml(group.label)}</p>
+            <h3>${escapeHtml(heroText)}</h3>
           </div>
-          <h3>${escapeHtml(group.label)}</h3>
-          <p>${escapeHtml(group.titles.join(', '))}</p>
+          <div class="track-metrics">
+            <span>${group.count} notebook${group.count === 1 ? '' : 's'}</span>
+            <span>${group.pageTotal} pages</span>
+          </div>
+          <p class="track-description">${escapeHtml(details.description || '')}</p>
+          <p class="track-list">${escapeHtml(group.titles.join(', '))}</p>
         </article>
-      `
+      `;
+      }
         )
         .join('');
 }
