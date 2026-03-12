@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Notebooks | Sagar Biswas</title>
+    <meta name="description"
+        content="A professional GitHub Pages showcase for six JavaScript notebooks covering fundamentals, DOM, BOM, browser storage, best practices, canvas, and modern ES6+ topics." />
+    <meta name="keywords"
+        content="JavaScript notebooks, JavaScript PDF notes, DOM, BOM, ES6, web storage, GitHub Pages" />
+    <meta name="author" content="Sagar Biswas" />
+    <meta property="og:title" content="JavaScript Notebooks | Sagar Biswas" />
+    <meta property="og:description"
+        content="Explore a structured JavaScript learning collection with curriculum overviews, searchable notebook cards, and direct access to every PDF." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/favicon.svg" />
+    <meta name="theme-color" content="#0b1020" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "JavaScript Notebooks",
+        "author": {
+          "@type": "Person",
+          "name": "Sagar Biswas"
+        },
+        "description": "A curated JavaScript learning collection published as PDF notebooks and presented through a GitHub Pages portfolio site.",
+        "about": ["JavaScript", "DOM", "BOM", "Web Storage API", "ES6", "Canvas"]
+      }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="#top" aria-label="JavaScript Notebooks home">
+                <span class="brand-mark">JS</span>
+                <span>
+                    <strong>JavaScript Notebooks</strong>
+                    <small>Sagar Biswas</small>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="#curriculum">Curriculum</a>
+                <a href="#library">Library</a>
+                <a href="#learning-path">Learning Path</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="top">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Professional portfolio • GitHub Pages ready</p>
+                    <h1>A polished home for your JavaScript notebook collection.</h1>
+                    <p class="hero-text">
+                        This site turns a PDF-only repository into a clean learning hub. Visitors can quickly
+                        understand what each notebook covers, who it is for, and where to start.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#library">Explore the library</a>
+                        <a class="button button-secondary" href="README.md">Read the guide</a>
+                    </div>
+
+                    <ul class="hero-points" aria-label="Highlights">
+                        <li>Structured across fundamentals, browser APIs, and modern JavaScript</li>
+                        <li>Direct PDF access, search, filters, and learning outcomes</li>
+                        <li>Zero-build static site designed for GitHub Pages</li>
+                    </ul>
+                </div>
+
+                <aside class="hero-panel" aria-label="Collection snapshot">
+                    <div class="stats-grid" id="stats-grid">
+                        <article>
+                            <span class="stat-value" id="stat-notebooks">6</span>
+                            <span class="stat-label">Notebook PDFs</span>
+                        </article>
+                        <article>
+                            <span class="stat-value" id="stat-pages">128</span>
+                            <span class="stat-label">Total pages</span>
+                        </article>
+                        <article>
+                            <span class="stat-value" id="stat-sections">63</span>
+                            <span class="stat-label">Covered sections</span>
+                        </article>
+                        <article>
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Learning tracks</span>
+                        </article>
+                    </div>
+
+                    <div class="focus-box">
+                        <h2>What learners will find here</h2>
+                        <p>
+                            A progressive JavaScript path: basics first, then browser APIs, then modern ES6+
+                            patterns and maintainability practices.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="curriculum">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Curriculum overview</p>
+                    <h2>One repository, three learning tracks</h2>
+                    <p>
+                        The collection is organized so beginners can start with fundamentals, then move into
+                        browser-side APIs and finally modern JavaScript patterns used in real projects.
+                    </p>
+                </div>
+
+                <div class="track-grid" id="track-grid"></div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="library">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow">Notebook library</p>
+                        <h2>Searchable, filterable, and ready to study</h2>
+                    </div>
+                    <p id="results-count" class="results-count">Showing all notebooks</p>
+                </div>
+
+                <div class="toolbar" role="search">
+                    <label class="search-field" for="search-input">
+                        <span class="visually-hidden">Search notebooks</span>
+                        <input id="search-input" type="search" placeholder="Search by topic, feature, or section..."
+                            autocomplete="off" />
+                    </label>
+
+                    <div class="filter-group" id="filter-group" aria-label="Notebook categories"></div>
+                </div>
+
+                <div class="card-grid" id="notebook-grid" aria-live="polite"></div>
+                <noscript>
+                    <p class="notice">
+                        JavaScript is required for the interactive catalog. The PDFs are still available in
+                        the repository root.
+                    </p>
+                </noscript>
+            </div>
+        </section>
+
+        <section class="section" id="learning-path">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Suggested study flow</p>
+                    <h2>A practical learning path for readers</h2>
+                    <p>
+                        If someone lands here for the first time, this sequence gives them the clearest route
+                        from beginner confidence to modern JavaScript fluency.
+                    </p>
+                </div>
+
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="repository-quality">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Why this repository now feels professional</p>
+                    <h2>More than a file dump</h2>
+                    <p>
+                        The repository now includes a discoverable landing page, clear documentation, and an
+                        automated quality gate so the collection is easier to trust, browse, and maintain.
+                    </p>
+                </div>
+
+                <div class="value-grid">
+                    <article class="value-card">
+                        <h3>Clear positioning</h3>
+                        <p>
+                            Visitors immediately see what the collection contains, what level it serves, and how
+                            to move through it in order.
+                        </p>
+                    </article>
+                    <article class="value-card">
+                        <h3>Better discoverability</h3>
+                        <p>
+                            The catalog exposes summaries, sections, outcomes, and direct PDF links without
+                            making users open every file blindly.
+                        </p>
+                    </article>
+                    <article class="value-card">
+                        <h3>Automated quality checks</h3>
+                        <p>
+                            A GitHub Actions workflow validates the site, documentation, and file references so
+                            future changes stay reliable.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Frequently asked questions</p>
+                    <h2>Quick answers for learners and reviewers</h2>
+                </div>
+
+                <div class="faq-list">
+                    <details>
+                        <summary>Who is this repository for?</summary>
+                        <p>
+                            It is best suited for beginners and early-intermediate learners who want a structured
+                            JavaScript path with examples and browser-focused practice.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Are these notebooks enough on their own?</summary>
+                        <p>
+                            They are strong study material for concepts and examples. For mastery, readers should
+                            pair them with hands-on mini projects and browser experimentation.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>How do I preview the website locally?</summary>
+                        <p>
+                            Serve the repository with any static server, such as Python's built-in HTTP server,
+                            so the catalog can load the structured notebook data correctly.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>How is the site published on GitHub Pages?</summary>
+                        <p>
+                            The repository is prepared for branch-based GitHub Pages hosting. Enable Pages from
+                            the repository settings and choose the main branch root as the publishing source.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div>
+                <strong>JavaScript Notebooks</strong>
+                <p class="footer-copy">
+                    A curated JavaScript learning collection by Sagar Biswas, presented as a professional
+                    GitHub Pages-ready project.
+                </p>
+            </div>
+            <div class="footer-meta">
+                <a href="README.md">Documentation</a>
+                <a href="#library">Notebook library</a>
+                <span id="current-year"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

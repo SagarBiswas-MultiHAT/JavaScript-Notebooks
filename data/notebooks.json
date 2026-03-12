@@ -1,0 +1,273 @@
+{
+    "collectionName": "JavaScript Notebooks",
+    "author": "Sagar Biswas",
+    "lastUpdated": "2026-03-12",
+    "summary": "A structured JavaScript learning library built around six PDF notebooks that progress from fundamentals to DOM, BOM, browser storage, error handling, canvas, and modern ES6+ features.",
+    "stats": {
+        "notebooks": 6,
+        "pages": 128,
+        "sections": 63
+    },
+    "categories": [
+        {
+            "id": "foundations",
+            "label": "Foundations"
+        },
+        {
+            "id": "browser-apis",
+            "label": "Browser APIs"
+        },
+        {
+            "id": "modern-js",
+            "label": "Modern JavaScript"
+        }
+    ],
+    "notebooks": [
+        {
+            "part": 1,
+            "slug": "javascript-basics",
+            "title": "JavaScript Basics",
+            "category": "foundations",
+            "level": "Beginner",
+            "pages": 29,
+            "duration": "3-5 hours",
+            "file": "JS_Part-1_Basics.pdf",
+            "summary": "Build a solid base in JavaScript syntax, variables, functions, operators, arrays, objects, and everyday core APIs.",
+            "highlights": [
+                "What JavaScript is and why it matters",
+                "Browser-based setup and Node.js installation",
+                "Output methods, comments, and data types",
+                "Variables, number methods, string manipulation, and functions",
+                "Operators, control flow, loops, arrays, objects, constructors, Math, and Date"
+            ],
+            "sections": [
+                "What is JavaScript?",
+                "Features of JavaScript",
+                "Using browser as an IDE",
+                "Node.js installation",
+                "Showing output in JavaScript",
+                "Adding JavaScript to an HTML file",
+                "Keywords, data types, and comments",
+                "Variable declarations and naming rules",
+                "Variable practice challenge",
+                "Number methods",
+                "String manipulation",
+                "Functions",
+                "Arithmetic and assignment operators",
+                "Calculator task",
+                "Area calculation task",
+                "Temperature conversion task",
+                "Relational and logical operators",
+                "Control statements",
+                "Loop control statements",
+                "Odd and even counting task",
+                "Ternary operator",
+                "Arrays",
+                "Objects",
+                "Constructors",
+                "Math object",
+                "Date object"
+            ],
+            "outcomes": [
+                "Write and run beginner-friendly JavaScript programs",
+                "Use variables, functions, and data structures with confidence",
+                "Solve small logic and calculator-style exercises"
+            ]
+        },
+        {
+            "part": 2,
+            "slug": "web-storage-api",
+            "title": "Web Storage API",
+            "category": "browser-apis",
+            "level": "Beginner",
+            "pages": 6,
+            "duration": "45-60 minutes",
+            "file": "JS_Part-2_ JavaScript Web Storage API.pdf",
+            "summary": "Learn how browsers store data using localStorage, sessionStorage, and cookies, and when each option is the right fit.",
+            "highlights": [
+                "Differences between localStorage, sessionStorage, and cookies",
+                "Key methods such as setItem, getItem, removeItem, and clear",
+                "JSON serialization for arrays and objects",
+                "Practical browser-side use cases and trade-offs"
+            ],
+            "sections": [
+                "Web Storage API overview",
+                "localStorage persistence and limits",
+                "sessionStorage persistence and limits",
+                "Cookie basics, limits, and use cases",
+                "Storage methods and examples",
+                "JSON.stringify and JSON.parse",
+                "Real-time use cases",
+                "Security considerations and comparison table"
+            ],
+            "outcomes": [
+                "Choose the correct browser storage mechanism",
+                "Persist simple user settings and temporary state safely",
+                "Understand size, scope, and lifecycle trade-offs"
+            ]
+        },
+        {
+            "part": 3,
+            "slug": "dom-mastery",
+            "title": "Document Object Model (DOM)",
+            "category": "browser-apis",
+            "level": "Intermediate",
+            "pages": 33,
+            "duration": "4-6 hours",
+            "file": "JS_Part-3_Document Object Model (DOM).pdf",
+            "summary": "Move from static HTML to dynamic interfaces by selecting elements, handling events, traversing the DOM, and building interactive widgets.",
+            "highlights": [
+                "Element selection with classic selectors and query selectors",
+                "Creating, adding, removing, and traversing DOM nodes",
+                "Dynamic styling, sliders, animations, and multimedia interactions",
+                "Rich event handling across mouse, keyboard, focus, clipboard, drag, media, and forms"
+            ],
+            "sections": [
+                "Selecting HTML elements",
+                "getElementById, getElementsByTagName, getElementsByClassName",
+                "Query selectors",
+                "onclick event handlers",
+                "Find, create, add, and remove HTML elements",
+                "DOM methods and properties",
+                "DOM traversing",
+                "Image slider",
+                "Changing CSS styles dynamically",
+                "Event listeners",
+                "Event listeners with multiple elements",
+                "Playing audio with event listeners",
+                "Adding and removing animations",
+                "Keypress listener",
+                "Change event and event object",
+                "Submit event and forms",
+                "Media events",
+                "Scroll, resize, and toggle events",
+                "Mouse events",
+                "Keyboard events",
+                "Focus events",
+                "Clipboard events",
+                "Drag events"
+            ],
+            "outcomes": [
+                "Build interactive browser interfaces",
+                "Attach the right event model to the right UI behavior",
+                "Manipulate DOM trees without relying on frameworks"
+            ]
+        },
+        {
+            "part": 4,
+            "slug": "bom-practical",
+            "title": "Browser Object Model (BOM)",
+            "category": "browser-apis",
+            "level": "Intermediate",
+            "pages": 8,
+            "duration": "60-90 minutes",
+            "file": "JS_Part-4_Browser Object Model (BOM).pdf",
+            "summary": "Understand how JavaScript interacts with the browser environment through location APIs, dialogs, timers, and a practical digital clock example.",
+            "highlights": [
+                "Location object properties and methods",
+                "Popup boxes with alert, confirm, and prompt",
+                "Timing events with setTimeout and setInterval",
+                "A digital clock implementation"
+            ],
+            "sections": [
+                "Location object",
+                "Location properties",
+                "assign, reload, and replace",
+                "Popup boxes",
+                "alert, confirm, and prompt",
+                "Timing events",
+                "setTimeout and clearTimeout",
+                "setInterval and clearInterval",
+                "Digital clock implementation"
+            ],
+            "outcomes": [
+                "Work with browser navigation and timers confidently",
+                "Use built-in dialog APIs intentionally",
+                "Understand when BOM APIs improve user experience"
+            ]
+        },
+        {
+            "part": 5,
+            "slug": "best-practices-error-canvas",
+            "title": "Best Practices, Error Handling, and Canvas",
+            "category": "modern-js",
+            "level": "Intermediate",
+            "pages": 9,
+            "duration": "90-120 minutes",
+            "file": "JS_Part-5_Best Practices, Error_Handling_and_Canvas Mastery.pdf",
+            "summary": "Improve code quality with practical conventions, modern defensive syntax, structured error handling, and an introduction to canvas graphics.",
+            "highlights": [
+                "Naming, declarations, equality, DOM performance, and organization tips",
+                "Optional chaining and nullish coalescing",
+                "try, catch, finally, throw, and custom errors",
+                "Canvas drawing fundamentals and practical tips"
+            ],
+            "sections": [
+                "JavaScript best practices guide",
+                "Naming conventions",
+                "Variable declarations",
+                "Objects and arrays",
+                "Strict equality",
+                "Switch statements",
+                "DOM manipulation",
+                "Functions",
+                "Error handling",
+                "Code organization",
+                "Performance tips",
+                "Optional chaining",
+                "Nullish coalescing",
+                "Error handling guide",
+                "Canvas drawing on web pages",
+                "Pro tips"
+            ],
+            "outcomes": [
+                "Write cleaner and more maintainable JavaScript",
+                "Handle runtime failures gracefully",
+                "Get started with graphics-oriented browser work"
+            ]
+        },
+        {
+            "part": 6,
+            "slug": "modern-es6-plus",
+            "title": "Modern ES6+ Essentials and Deep Dive",
+            "category": "modern-js",
+            "level": "Intermediate",
+            "pages": 43,
+            "duration": "6-8 hours",
+            "file": "JS_Part-6_Modern ES6+ Essentials & Deep Dive.pdf",
+            "summary": "Advance into modern JavaScript with block scoping, parameters, spread, enhanced objects, loops, array methods, modules, classes, and asynchronous thinking.",
+            "highlights": [
+                "let, const, hoisting, and strict mode",
+                "Default, rest, and spread syntax",
+                "Enhanced object literals, loops, and array methods",
+                "Arrow functions, destructuring, modules, classes, and async concepts"
+            ],
+            "sections": [
+                "ES6 variables, loops, and functions",
+                "let, const, and var comparison",
+                "Arrow functions",
+                "Template literals",
+                "Enhanced object literals",
+                "ES5 hoisting",
+                "Strict mode",
+                "Default parameters",
+                "Rest parameters",
+                "Spread operator",
+                "for...of, for...in, and forEach",
+                "map, filter, and reduce",
+                "Destructuring arrays and objects",
+                "find and findIndex",
+                "startsWith, endsWith, and includes",
+                "ES6 modules export and import",
+                "ES6 classes",
+                "Synchronous vs asynchronous programming",
+                "Beginner-friendly exercises"
+            ],
+            "outcomes": [
+                "Read and write modern production-style JavaScript",
+                "Use ES6+ features to reduce boilerplate",
+                "Prepare for framework and application-level work"
+            ]
+        }
+    ]
+}
