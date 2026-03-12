@@ -143,9 +143,13 @@ input {
     color: #ffffff;
 }
 
-.hero,
+.hero {
+    padding: 2rem 0;
+}
+
 .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
+
 }
 
 .section-alt {
@@ -265,6 +269,7 @@ h3 {
 }
 
 .hero-panel {
+    margin-top: 24px;
     padding: 1.4rem;
     border-radius: var(--radius-lg);
 }
