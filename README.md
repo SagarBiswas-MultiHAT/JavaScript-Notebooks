@@ -11,7 +11,7 @@ If someone opens this repository for the first time, the goal is simple: they sh
 
 - 6 JavaScript notebook PDFs
 - 128 total pages of study material
-- 63 mapped sections across fundamentals, browser APIs, and modern ES6+
+- 101 mapped sections across fundamentals, browser APIs, and modern ES6+
 - A polished static website for GitHub Pages
 - A GitHub Actions workflow that validates the repository and runs tests
 
