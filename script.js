@@ -18,37 +18,37 @@ const elements = {
 };
 
 const TRACK_DETAILS = {
-  foundations: {
-    hero: 'JavaScript Basics',
-    description:
-      'Master the language fundamentals, operators, arrays, objects, constructors, and essential Math/Date APIs before moving into DOM work.'
-  },
-  'browser-apis': {
-    hero: 'Web Storage API, DOM, BOM',
-    description:
-      'Build browser-aware interfaces by selecting elements, handling events, and understanding the BOM plus storage trade-offs.'
-  },
-  'modern-js': {
-    hero: 'Best Practices, Error Handling, Canvas & ES6+',
-    description:
-      'Adopt defensive coding habits, modern syntax, modules, classes, and asynchronous thinking that production JavaScript uses.'
-  }
+    foundations: {
+        hero: 'JavaScript Basics',
+        description:
+            'Master the language fundamentals, operators, arrays, objects, constructors, and essential Math/Date APIs before moving into DOM work.'
+    },
+    'browser-apis': {
+        hero: 'Web Storage API, DOM, BOM',
+        description:
+            'Build browser-aware interfaces by selecting elements, handling events, and understanding the BOM plus storage trade-offs.'
+    },
+    'modern-js': {
+        hero: 'Best Practices, Error Handling, Canvas & ES6+',
+        description:
+            'Adopt defensive coding habits, modern syntax, modules, classes, and asynchronous thinking that production JavaScript uses.'
+    }
 };
 
 const PROJECTS_TRACK = {
-  id: 'projects',
-  label: 'Project exploration',
-  hero: 'Companion security and utility repos',
-  description:
-    'Apply what you learn with practical labs, QR utilities, multi-factor auth experiments, password scoring, and XSS defense tooling.',
-  metrics: ['5 companion projects'],
-  titles: [
-    'WiFi QR Generator',
-    'BruteforceLab1',
-    'Multi-FA-Auth',
-    'Password Strength Checker',
-    'XSS WebGuard'
-  ]
+    id: 'projects',
+    label: 'Project exploration',
+    hero: 'Companion security and utility repos',
+    description:
+        'Apply what you learn with practical labs, QR utilities, multi-factor auth experiments, password scoring, and XSS defense tooling.',
+    metrics: ['5 companion projects'],
+    titles: [
+        'WiFi QR Generator',
+        'BruteforceLab1',
+        'Multi-FA-Auth',
+        'Password Strength Checker',
+        'XSS WebGuard'
+    ]
 };
 
 function escapeHtml(value) {
@@ -77,31 +77,31 @@ function updateStats(catalog) {
 }
 
 function renderTracks(catalog) {
-  const grouped = catalog.categories.map((category) => {
-    const notebooks = catalog.notebooks.filter((notebook) => notebook.category === category.id);
-    const titles = notebooks.map((notebook) => notebook.title);
-    const pageTotal = notebooks.reduce((sum, notebook) => sum + notebook.pages, 0);
+    const grouped = catalog.categories.map((category) => {
+        const notebooks = catalog.notebooks.filter((notebook) => notebook.category === category.id);
+        const titles = notebooks.map((notebook) => notebook.title);
+        const pageTotal = notebooks.reduce((sum, notebook) => sum + notebook.pages, 0);
 
-    return {
-      ...category,
-      count: notebooks.length,
-      pageTotal,
-      titles,
-      metrics: [`${notebooks.length} notebook${notebooks.length === 1 ? '' : 's'}`, `${pageTotal} pages`]
-    };
-  });
+        return {
+            ...category,
+            count: notebooks.length,
+            pageTotal,
+            titles,
+            metrics: [`${notebooks.length} notebook${notebooks.length === 1 ? '' : 's'}`, `${pageTotal} pages`]
+        };
+    });
 
-  const tracks = grouped.map((group) => ({
-    ...group,
-    hero: TRACK_DETAILS[group.id]?.hero || group.titles[0] || group.label,
-    description: TRACK_DETAILS[group.id]?.description || ''
-  }));
+    const tracks = grouped.map((group) => ({
+        ...group,
+        hero: TRACK_DETAILS[group.id]?.hero || group.titles[0] || group.label,
+        description: TRACK_DETAILS[group.id]?.description || ''
+    }));
 
-  tracks.push(PROJECTS_TRACK);
+    tracks.push(PROJECTS_TRACK);
 
-  elements.trackGrid.innerHTML = tracks
-    .map((group) => {
-      return `
+    elements.trackGrid.innerHTML = tracks
+        .map((group) => {
+            return `
         <article class="track-card">
           <div class="track-card-head">
             <p class="track-eyebrow">${escapeHtml(group.label)}</p>
@@ -109,15 +109,15 @@ function renderTracks(catalog) {
           </div>
           <div class="track-metrics">
             ${(group.metrics || [])
-              .map((metric) => `<span>${escapeHtml(metric)}</span>`)
-              .join('')}
+                    .map((metric) => `<span>${escapeHtml(metric)}</span>`)
+                    .join('')}
           </div>
           <p class="track-description">${escapeHtml(group.description || '')}</p>
           <p class="track-list">${escapeHtml((group.titles || []).join(', '))}</p>
         </article>
       `;
-    })
-    .join('');
+        })
+        .join('');
 }
 
 function renderFilters(catalog) {
