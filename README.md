@@ -25,6 +25,15 @@ Live site: https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/
 - Web Storage and browser APIs
 - Modern ES6+ essentials and best practices
 
+## Notebook PDFs
+
+- [JS_Part-1_Basics.pdf](JS_Part-1_Basics.pdf)
+- [JS_Part-2_ JavaScript Web Storage API.pdf](JS_Part-2_%20JavaScript%20Web%20Storage%20API.pdf)
+- [JS_Part-3_Document Object Model (DOM).pdf](JS_Part-3_Document%20Object%20Model%20(DOM).pdf)
+- [JS_Part-4_Browser Object Model (BOM).pdf](JS_Part-4_Browser%20Object%20Model%20(BOM).pdf)
+- [JS_Part-5_Best Practices, Error_Handling_and_Canvas Mastery.pdf](JS_Part-5_Best%20Practices,%20Error_Handling_and_Canvas%20Mastery.pdf)
+- [JS_Part-6_Modern ES6+ Essentials & Deep Dive.pdf](JS_Part-6_Modern%20ES6+%20Essentials%20&%20Deep%20Dive.pdf)
+
 ## Related Notebooks
 
 - [Bash Scripting Tutorial and Shell Script Examples](https://github.com/SagarBiswas-MultiHAT/BashScript-Notebooks)

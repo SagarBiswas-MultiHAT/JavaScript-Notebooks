@@ -57,14 +57,19 @@
             }
         </script>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <main class="section">
         <div class="container">
-            <div class="hero-panel" style="max-width: 720px; margin: 4rem auto; text-align: center;">
-                <nav aria-label="Breadcrumb" style="text-align: left; margin-bottom: 1rem;">
+            <div class="hero-panel error-shell">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
                     <ol>
                         <li><a href="https://sagarbiswas-multihat.github.io/">Sagar Biswas Portfolio</a></li>
                         <li><a href="https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/">JavaScript Tutorial
@@ -73,12 +78,12 @@
                     </ol>
                 </nav>
                 <p class="eyebrow">404</p>
-                <h1 style="font-size: clamp(2.4rem, 8vw, 4rem); margin-bottom: 1rem;">Page not found.</h1>
+                <h1 class="error-title">Page not found.</h1>
                 <p class="hero-text">
                     The page you requested does not exist. Return to the main library to continue exploring
                     the JavaScript notebooks.
                 </p>
-                <div class="hero-actions" style="justify-content: center; margin-bottom: 0;">
+                <div class="hero-actions error-actions">
                     <a class="button button-primary"
                         href="https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/">Go to JavaScript Tutorial
                         and Vanilla JS Examples</a>

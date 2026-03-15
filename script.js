@@ -51,6 +51,8 @@ const PROJECTS_TRACK = {
     ]
 };
 
+let revealObserver = null;
+
 function escapeHtml(value) {
     return String(value)
         .replaceAll('&', '&amp;')
@@ -118,6 +120,8 @@ function renderTracks(catalog) {
       `;
         })
         .join('');
+
+    setupRevealAnimations();
 }
 
 function renderFilters(catalog) {
@@ -190,6 +194,7 @@ function renderNotebookGrid(catalog) {
         <p>Try a broader keyword or switch back to the full catalog.</p>
       </div>
     `;
+        setupRevealAnimations();
         return;
     }
 
@@ -253,6 +258,8 @@ function renderNotebookGrid(catalog) {
       `;
         })
         .join('');
+
+    setupRevealAnimations();
 }
 
 function renderTimeline(catalog) {
@@ -269,6 +276,57 @@ function renderTimeline(catalog) {
       `
         )
         .join('');
+
+    setupRevealAnimations();
+}
+
+function setupRevealAnimations() {
+    const targets = document.querySelectorAll(
+        '.hero, .section, .hero-panel, .track-card, .notebook-card, .timeline-item, .value-card, .project-card, .faq-list details, .related-list li'
+    );
+
+    if (!targets.length) {
+        return;
+    }
+
+    targets.forEach((target) => {
+        target.classList.add('reveal');
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        targets.forEach((target) => target.classList.add('is-visible'));
+        return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        targets.forEach((target) => target.classList.add('is-visible'));
+        return;
+    }
+
+    if (revealObserver) {
+        revealObserver.disconnect();
+    }
+
+    revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: '0px 0px -8% 0px'
+        }
+    );
+
+    targets.forEach((target) => {
+        if (!target.classList.contains('is-visible')) {
+            revealObserver.observe(target);
+        }
+    });
 }
 
 function renderPage(catalog) {
@@ -278,6 +336,7 @@ function renderPage(catalog) {
     renderNotebookGrid(catalog);
     renderTimeline(catalog);
     elements.currentYear.textContent = `Updated ${catalog.lastUpdated}`;
+    setupRevealAnimations();
 }
 
 function renderError(error) {
@@ -290,6 +349,8 @@ function renderError(error) {
       <p>Serve this repository through a local or hosted web server so the structured data file can be loaded.</p>
     </div>
   `;
+
+    setupRevealAnimations();
 }
 
 async function init() {
