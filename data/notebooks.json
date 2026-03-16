@@ -2,13 +2,19 @@
     "collectionName": "JavaScript Notebooks",
     "author": "Sagar Biswas",
     "lastUpdated": "2026-03-12",
-    "summary": "A structured JavaScript learning library built around six PDF notebooks that progress from fundamentals to DOM, BOM, browser storage, error handling, canvas, and modern ES6+ features.",
+    "summary": "A structured JavaScript learning library built around seven PDF notebooks that progress from fundamentals to JSON, DOM, BOM, browser storage, error handling, canvas, and modern ES6+ features.",
     "stats": {
-        "notebooks": 6,
-        "pages": 128,
-        "sections": 101
+        "notebooks": 7,
+        "pages": 138,
+        "sections": 116,
+        "exercises": 20,
+        "duration": "1 Month"
     },
     "categories": [
+        {
+            "id": "JSON",
+            "label": "JSON"
+        },
         {
             "id": "foundations",
             "label": "Foundations"
@@ -23,6 +29,45 @@
         }
     ],
     "notebooks": [
+        {
+            "part": "JSON",
+            "slug": "javascript-json",
+            "title": "JavaScript Object Notation(JSON)",
+            "category": "JSON",
+            "level": "Beginner",
+            "pages": 10,
+            "duration": "60-90 minutes",
+            "file": "JSON-(JavaScript_Object_Notation).pdf",
+            "summary": "A concise introduction to JSON: syntax, types, nested structures, validation, and practical JavaScript usage patterns.",
+            "highlights": [
+                "Lightweight, human-readable data-interchange format",
+                "Objects and arrays as core structures; strict syntax rules (double quotes, no comments)",
+                "JSON validation tools and JSONPath querying",
+                "Practical examples for creating, reading, modifying, and deleting JSON in JavaScript"
+            ],
+            "sections": [
+                "Introduction",
+                "Why JSON?",
+                "What is JSON?",
+                "JSON Basic Structure (Objects & Arrays)",
+                "Nested JSON",
+                "JSON Syntax and Rules",
+                "JSON Data Types",
+                "JSON vs JavaScript Objects",
+                "Demo: Creating a JSON File",
+                "JSON Data Validation",
+                "JSONPath overview",
+                "Accessing JSON (Dot & Bracket Notation)",
+                "Looping Through JSON Data",
+                "Modifying JSON Data",
+                "Deleting JSON Data"
+            ],
+            "outcomes": [
+                "Read and write valid JSON and understand its core data types",
+                "Use JSON in JavaScript: access, loop, modify, and delete data",
+                "Validate JSON and query it using JSONPath for real-world integration"
+            ]
+        },
         {
             "part": 1,
             "slug": "javascript-basics",

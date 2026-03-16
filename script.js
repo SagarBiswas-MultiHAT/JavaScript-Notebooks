@@ -18,6 +18,11 @@ const elements = {
 };
 
 const TRACK_DETAILS = {
+    JSON: {
+        hero: 'JavaScript Object Notation (JSON)',
+        description:
+            'Learn the fundamentals of JSON: syntax, types, nested structures, validation, and practical JavaScript usage patterns.'
+    },
     foundations: {
         hero: 'JavaScript Basics',
         description:
