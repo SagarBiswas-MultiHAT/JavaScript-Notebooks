@@ -1,25 +1,27 @@
 ---
-title: "JavaScript Tutorial - Vanilla JavaScript Examples Notebook"
-description: "JavaScript tutorial with vanilla JavaScript examples on DOM, BOM, Web Storage, ES6+, and practical notebook-based study guidance."
+title: "JavaScript Tutorial -  JavaScript Practical Notebooks"
+description: "JavaScript tutorial with vanilla JavaScript examples on JSON, DOM, BOM, Web Storage, ES6+, and practical notebook-based study guidance."
 date: "2026-03-15"
-tags: [javascript, vanilla-javascript, dom, bom, es6]
+tags: [javascript, JSON, dom, bom, es6]
 categories: [javascript-notebooks]
 author: "Sagar Biswas"
 canonical_url: "https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/"
 ---
 
-# JavaScript Tutorial and Vanilla JS Examples
+# JavaScript Tutorial - JavaScript Practical Notebooks
 
-JavaScript tutorial repository with vanilla JavaScript examples covering fundamentals, browser APIs, modern ES6+ patterns, and practical notebook exercises. This repo is designed as a clear learning path with searchable pages and downloadable notebook parts.
+JavaScript tutorial repository with vanilla JavaScript examples covering JSON, fundamentals, browser APIs, modern ES6+ patterns, and practical notebook exercises. This repo is designed as a clear learning path with searchable pages and downloadable notebook parts.
 
 Live site: https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/
 
 ![GitHub Pages](https://img.shields.io/badge/pages-live-blue)
 ![JavaScript](https://img.shields.io/badge/javascript-tutorial-F7DF1E)
+![JSON](https://img.shields.io/badge/json-learn-111827)
 ![ES6+](https://img.shields.io/badge/es6%2B-modern-111827)
 
 ## Notebook Scope
 
+- JSON (JavaScript Object Notation) explained with examples
 - JavaScript fundamentals and syntax
 - DOM and BOM practical examples
 - Web Storage and browser APIs
@@ -27,6 +29,7 @@ Live site: https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/
 
 ## Notebook PDFs
 
+- [JSON-(JavaScript_Object_Notation).pdf](JSON-(JavaScript_Object_Notation).pdf)
 - [JS_Part-1_Basics.pdf](JS_Part-1_Basics.pdf)
 - [JS_Part-2_ JavaScript Web Storage API.pdf](JS_Part-2_%20JavaScript%20Web%20Storage%20API.pdf)
 - [JS_Part-3_Document Object Model (DOM).pdf](JS_Part-3_Document%20Object%20Model%20(DOM).pdf)
