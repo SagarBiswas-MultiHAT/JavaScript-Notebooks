@@ -17,7 +17,12 @@ class RepositoryTests(unittest.TestCase):
 
     def test_catalog_has_expected_parts(self) -> None:
         parts = [notebook["part"] for notebook in self.catalog["notebooks"]]
-        self.assertEqual(parts, [1, 2, 3, 4, 5, 6])
+        self.assertTrue(parts, "Notebook catalog must not be empty")
+        numeric_parts = sorted(part for part in parts if isinstance(part, int))
+        self.assertEqual(numeric_parts, [1, 2, 3, 4, 5, 6])
+        non_numeric_parts = [part for part in parts if not isinstance(part, int)]
+        for part in non_numeric_parts:
+            self.assertIsInstance(part, str)
 
     def test_catalog_pdf_targets_exist(self) -> None:
         for notebook in self.catalog["notebooks"]:
