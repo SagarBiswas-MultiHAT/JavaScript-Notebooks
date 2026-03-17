@@ -123,7 +123,7 @@ input {
 }
 
 .container {
-    width: min(calc(100% - 2rem), var(--container));
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -335,7 +335,7 @@ h3 {
     color: var(--muted);
 }
 
-.hero-points li + li {
+.hero-points li+li {
     margin-top: 0.45rem;
 }
 
@@ -403,7 +403,7 @@ h3 {
 }
 
 .section-heading {
-    max-width: 840px;
+    max-width: 70%;
     margin-bottom: 2rem;
 }
 
