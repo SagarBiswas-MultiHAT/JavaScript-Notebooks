@@ -29,7 +29,7 @@ Live site: https://sagarbiswas-multihat.github.io/JavaScript-Notebooks/
 
 ## Notebook PDFs
 
-- [JSON-(JavaScript_Object_Notation).pdf](JSON-(JavaScript_Object_Notation).pdf)
+- [JavaScript Object Notation(JSON) — JSON-(JavaScript_Object_Notation).pdf](JSON-(JavaScript_Object_Notation).pdf)
 - [JS_Part-1_Basics.pdf](JS_Part-1_Basics.pdf)
 - [JS_Part-2_ JavaScript Web Storage API.pdf](JS_Part-2_%20JavaScript%20Web%20Storage%20API.pdf)
 - [JS_Part-3_Document Object Model (DOM).pdf](JS_Part-3_Document%20Object%20Model%20(DOM).pdf)

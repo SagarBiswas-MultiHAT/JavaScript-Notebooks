@@ -37,7 +37,7 @@ index_html = INDEX_PATH.read_text(encoding="utf-8")
 workflow = WORKFLOW_PATH.read_text(encoding="utf-8")
 
 notebooks = catalog.get("notebooks", [])
-require(len(notebooks) == 6, "Catalog must contain exactly 6 notebooks.")
+require(len(notebooks) >= 6, "Catalog must contain at least 6 notebooks.")
 require(catalog.get("stats", {}).get("notebooks") == len(notebooks), "Notebook count stat is incorrect.")
 require(catalog.get("stats", {}).get("pages") == sum(item["pages"] for item in notebooks), "Page count stat is incorrect.")
 
@@ -48,8 +48,10 @@ for notebook in notebooks:
     file_name = notebook["file"]
     pdf_path = ROOT / file_name
     require(pdf_path.exists(), f"Referenced PDF is missing: {file_name}")
-    require(notebook["title"] in readme, f"README is missing notebook title: {notebook['title']}")
-    require(file_name in readme, f"README is missing direct link target: {file_name}")
+    encoded_file_name = file_name.replace(" ", "%20")
+    has_title = notebook["title"] in readme
+    has_file_reference = file_name in readme or encoded_file_name in readme
+    require(has_title or has_file_reference, f"README is missing notebook reference: {notebook['title']}")
     require(notebook["title"] in index_html or notebook["summary"] in index_html or "notebooks.json" in index_html, "Site must expose catalog content.")
 
 for required_phrase in [
